@@ -1,7 +1,10 @@
 var express = require('express');
-var indexRouter = require('./routes/index');
 var app = express();
 
-app.use('/', indexRouter);
+
+var testRouter = require("./routes/test/route.test.js")
+
+app.use('/test', testRouter)
+
 
 module.exports = app;
