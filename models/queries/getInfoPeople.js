@@ -1,7 +1,7 @@
 const { loadQueries } = require("../../config/database/loadQuery.js")
 const pool = require("./../../config/database/pool.js")
 
-const getInfoPeopleByCpf =  async (cpf) => {
+const getInfoPeopleByCpf =  async (cpf) => { // TO DO BIRTH DATE FILTER
     const queries = await loadQueries();
     const peopleQueryByCpf = queries.infoPeople.infoPeopleByCpfQuery
     const queryParams = [cpf]
@@ -18,7 +18,23 @@ const getInfoPeopleByName = async (name) => {
     return peopleRows.rows
 }
 
+const getInfoPeopleByPhone = async (name) => {
+
+}
+
+const getInfoPeopleByRg = async (name) => {
+
+}
+
+const getInfoPeopleByMom = async (name) => {
+
+
+}
+
 module.exports = { 
     getInfoPeopleByCpf,
-    getInfoPeopleByName
+    getInfoPeopleByName,
+    getInfoPeopleByPhone,
+    getInfoPeopleByRg,
+    getInfoPeopleByMom
 }
